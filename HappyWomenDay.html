@@ -1,0 +1,491 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Women's Day 20/10</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --pink: #ff6f9f;
+            --pink-light: #ffe0eb;
+            --purple: #a18aff;
+            --cream: #fff9f7;
+            --text: #65475d;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Nunito', sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at 10% 20%, #ffe1ec 0, transparent 35%),
+                radial-gradient(circle at 90% 80%, #e7ddff 0, transparent 35%),
+                var(--cream);
+            overflow-x: hidden;
+        }
+
+        .sparkle {
+            position: fixed;
+            pointer-events: none;
+            z-index: 0;
+            animation: float 7s ease-in-out infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0); }
+            50% { transform: translateY(-25px) rotate(15deg); }
+        }
+
+        header {
+            position: relative;
+            z-index: 2;
+            padding: 24px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: #d95187;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: var(--purple);
+        }
+
+        .header-tag {
+            font-size: 0.8rem;
+            padding: 8px 15px;
+            border: 1px solid #f3c6dc;
+            border-radius: 30px;
+            background: #ffffffa8;
+        }
+
+        main {
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+            margin: 35px auto 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            padding: 9px 18px;
+            border-radius: 30px;
+            background: white;
+            box-shadow: 0 5px 25px #edb3d333;
+            color: #d95187;
+            font-size: 0.85rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            margin: 22px 0 12px;
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(3.6rem, 10vw, 7rem);
+            line-height: 1.1;
+            color: #ec6198;
+            text-shadow: 3px 5px 0 #ffdae7;
+        }
+
+        h1 span {
+            display: block;
+            color: #9d80e9;
+            font-size: 0.63em;
+        }
+
+        .subtitle {
+            max-width: 620px;
+            margin: 20px auto;
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+
+        .guitar {
+            margin: 28px auto;
+            font-size: clamp(4rem, 10vw, 6rem);
+            filter: drop-shadow(0 10px 10px #c98bad33);
+            animation: guitar 3s ease-in-out infinite;
+        }
+
+        @keyframes guitar {
+            0%, 100% { transform: rotate(-5deg) translateY(0); }
+            50% { transform: rotate(5deg) translateY(-10px); }
+        }
+
+        .card {
+            max-width: 650px;
+            margin: 25px auto;
+            padding: 35px 30px;
+            border: 1px solid #ffffff;
+            border-radius: 28px;
+            background: #ffffffc9;
+            box-shadow: 0 15px 55px #d89abb25;
+            backdrop-filter: blur(12px);
+        }
+
+        .card h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.4rem;
+            color: #d95187;
+            margin-bottom: 16px;
+        }
+
+        .card p {
+            line-height: 2;
+            font-size: 1rem;
+        }
+
+        .highlight {
+            color: #d95187;
+            font-weight: 800;
+        }
+
+        .btn {
+            display: inline-block;
+            border: none;
+            border-radius: 40px;
+            padding: 14px 25px;
+            margin: 12px 6px;
+            background: linear-gradient(135deg, #ff78a7, #b094ff);
+            color: white;
+            font-family: inherit;
+            font-size: 0.98rem;
+            font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 8px 22px #d28cb344;
+            transition: 0.25s;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 12px 25px #d28cb366;
+        }
+
+        #surprise {
+            display: none;
+            margin-top: 22px;
+            padding: 22px;
+            border-radius: 18px;
+            background: #fff0f6;
+            line-height: 2;
+            animation: appear 0.6s ease;
+        }
+
+        @keyframes appear {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .wish-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin: 55px 0;
+        }
+
+        .wish-item {
+            padding: 25px 15px;
+            border-radius: 22px;
+            background: #ffffffb8;
+            box-shadow: 0 8px 30px #d89abb15;
+            transition: 0.3s;
+        }
+
+        .wish-item:hover {
+            transform: translateY(-8px);
+        }
+
+        .wish-item .emoji {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+
+        .wish-item h3 {
+            color: #d95187;
+            margin-bottom: 9px;
+        }
+
+        .wish-item p {
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        .quote {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(1.8rem, 5vw, 2.6rem);
+            color: #9778d9;
+            margin: 40px 0;
+        }
+
+        footer {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 30px 15px 40px;
+            font-size: 0.9rem;
+            line-height: 2;
+            color: #9a7790;
+        }
+
+        .petal {
+            position: fixed;
+            top: -30px;
+            z-index: 5;
+            pointer-events: none;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(110vh) rotate(720deg);
+                opacity: 0.2;
+            }
+        }
+
+        .heart {
+            position: fixed;
+            pointer-events: none;
+            z-index: 10;
+            animation: heartUp 1.5s ease-out forwards;
+        }
+
+        @keyframes heartUp {
+            to {
+                transform: translateY(-150px) scale(1.7) rotate(25deg);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 650px) {
+            header {
+                padding: 20px 5%;
+            }
+
+            .logo {
+                font-size: 1.1rem;
+            }
+
+            .header-tag {
+                font-size: 0.7rem;
+                padding: 7px 10px;
+            }
+
+            main {
+                margin-top: 20px;
+                padding: 15px;
+            }
+
+            .card {
+                padding: 28px 20px;
+            }
+
+            .wish-grid {
+                grid-template-columns: 1fr;
+                gap: 13px;
+                margin: 35px 0;
+            }
+
+            .wish-item {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">VGC <span>♫</span></div>
+        <div class="header-tag">🌷 20.10 · Women's Day</div>
+    </header>
+
+    <main>
+        <div class="eyebrow">💗 A LITTLE LOVE FROM VGC 💗</div>
+
+        <h1>
+            Happy 20/10
+            <span>to our lovely girls!</span>
+        </h1>
+
+        <p class="subtitle">
+            Gửi những cô gái xinh đẹp của
+            <strong>VGC – Vinh Yen Guitar Club</strong> 🎸<br>
+            Hôm nay, mọi giai điệu đều dành riêng cho các bạn!
+        </p>
+
+        <div class="guitar">🎸🌷</div>
+
+        <section class="card">
+            <h2>Dear VGC Girls, 💌</h2>
+
+            <p>
+                Chúc các cô gái của VGC luôn
+                <span class="highlight">xinh đẹp, vui vẻ và hạnh phúc</span>!
+                <br>
+                Chúc các bạn luôn tự tin tỏa sáng, gặp thật nhiều may mắn
+                và có những ngày tháng thanh xuân rực rỡ bên VGC.
+                <br><br>
+                Mong rằng mỗi ngày của các bạn đều có một giai điệu thật hay,
+                một nụ cười thật tươi và những người luôn trân trọng các bạn.
+                💐
+            </p>
+
+            <button class="btn" onclick="showSurprise()">
+                💝 Nhận lời chúc đặc biệt
+            </button>
+
+            <div id="surprise">
+                <h3>✨ Lời nhắn bí mật từ VGC ✨</h3>
+                <p>
+                    Chúc bạn 20/10 vui vẻ!<br>
+                    Xinh đẹp như hoa, ngọt ngào như nhạc 🎶<br>
+                    Tiền vào như nước, deadline tự né,<br>
+                    Crush bật đèn xanh, cuộc đời bật chế độ healing! 💗
+                    <br><br>
+                    Và nếu hôm nay chưa ai tặng hoa...
+                    thì VGC tặng bạn cả một vườn hoa online! 🌷🌷🌷
+                </p>
+            </div>
+
+            <button class="btn" onclick="releaseHearts()">
+                💗 Thả tim cho các cô gái
+            </button>
+        </section>
+
+        <div class="quote">
+            "You are the melody that makes VGC more beautiful." 🎶
+        </div>
+
+        <h2 style="font-family:'Dancing Script';font-size:2.6rem;color:#d95187">
+            Our wishes for you 🌸
+        </h2>
+
+        <section class="wish-grid">
+            <div class="wish-item">
+                <div class="emoji">🌷</div>
+                <h3>Always Beautiful</h3>
+                <p>Luôn xinh đẹp theo cách riêng, tự tin và yêu thương chính mình.</p>
+            </div>
+
+            <div class="wish-item">
+                <div class="emoji">🎶</div>
+                <h3>Stay Happy</h3>
+                <p>Mỗi ngày đều ngập tràn tiếng cười, âm nhạc và những điều tích cực.</p>
+            </div>
+
+            <div class="wish-item">
+                <div class="emoji">💖</div>
+                <h3>Be Loved</h3>
+                <p>Luôn được yêu thương, trân trọng và gặp những người thật lòng.</p>
+            </div>
+        </section>
+
+        <p class="subtitle">
+            Cảm ơn các bạn đã là một phần thật đặc biệt của VGC.
+            <br>
+            Chúc các nàng có một ngày 20/10 thật đáng nhớ! 🫶
+        </p>
+
+        <div class="guitar">🎸💐🎵</div>
+    </main>
+
+    <footer>
+        <strong>VGC – Vinh Yen Guitar Club</strong><br>
+        Strumming strings, spreading love. 💗<br>
+        Made with ♡ for all VGC girls · 20/10
+    </footer>
+
+    <script>
+        // Hiện lời chúc bí mật
+        function showSurprise() {
+            const surprise = document.getElementById("surprise");
+
+            if (surprise.style.display === "block") {
+                surprise.style.display = "none";
+            } else {
+                surprise.style.display = "block";
+                surprise.scrollIntoView({
+                    behavior: "smooth",
+                    block: "nearest"
+                });
+                releaseHearts();
+            }
+        }
+
+        // Thả trái tim
+        function releaseHearts() {
+            const symbols = ["💗", "💖", "💕", "💘", "🌷", "✨"];
+
+            for (let i = 0; i < 35; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement("div");
+                    heart.className = "heart";
+                    heart.textContent =
+                        symbols[Math.floor(Math.random() * symbols.length)];
+
+                    heart.style.left = Math.random() * 100 + "vw";
+                    heart.style.top = (50 + Math.random() * 40) + "vh";
+                    heart.style.fontSize = (18 + Math.random() * 25) + "px";
+
+                    document.body.appendChild(heart);
+
+                    setTimeout(() => heart.remove(), 1600);
+                }, i * 35);
+            }
+        }
+
+        // Hiệu ứng hoa rơi
+        function createPetal() {
+            const petal = document.createElement("div");
+            petal.className = "petal";
+
+            const flowers = ["🌸", "🌷", "🌺", "💮", "✨"];
+            petal.textContent =
+                flowers[Math.floor(Math.random() * flowers.length)];
+
+            petal.style.left = Math.random() * 100 + "vw";
+            petal.style.fontSize = (12 + Math.random() * 17) + "px";
+            petal.style.animationDuration = (5 + Math.random() * 6) + "s";
+
+            document.body.appendChild(petal);
+
+            setTimeout(() => petal.remove(), 11000);
+        }
+
+        setInterval(createPetal, 500);
+
+        // Các ngôi sao trang trí
+        for (let i = 0; i < 16; i++) {
+            const star = document.createElement("div");
+            star.className = "sparkle";
+            star.textContent = ["✦", "♡", "✧"][i % 3];
+
+            star.style.left = Math.random() * 100 + "vw";
+            star.style.top = Math.random() * 100 + "vh";
+            star.style.fontSize = (12 + Math.random() * 18) + "px";
+            star.style.animationDelay = Math.random() * 5 + "s";
+            star.style.color = i % 2 === 0 ? "#ed85b0" : "#a18aff";
+
+            document.body.appendChild(star);
+        }
+    </script>
+</body>
+</html>
